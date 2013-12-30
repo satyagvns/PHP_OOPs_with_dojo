@@ -20,11 +20,12 @@
 			$this->userName = 'root';
 			$this->password = '';
 			$this->db = 'test_db';
-			
+
 			$this->mySQLConnection = mysql_connect($this->server, $this->userName, $this->password) or die('Connection Not Established');
 
 			$this->mySQLSelectDB = mysql_select_db($this->db, $this->mySQLConnection) or die('Database Not Setup Properly... Please check your 
 				database is created in mySQL which is mentioned in this APP...');
+			//print ('Connection Established...\n');
 		}
 
 		/* Please call this destruct in log off function. or else connection will be establish for ever. 
