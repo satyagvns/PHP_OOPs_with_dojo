@@ -7,7 +7,11 @@
 	$GN = new GeneralNotations();
 	
 	$filename = "cv.doc";
-
+	?>
+	<!-- 
+	<iframe src="http://docs.google.com/gview?url=http://www.example.com/report.doc"></iframe>
+	-->
+	<?php
     $content = $GN->getWordDocContent($filename);
     if($content !== false) {
 
