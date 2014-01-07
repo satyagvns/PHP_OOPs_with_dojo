@@ -4,5 +4,17 @@
 		include_once($filename);
 	}
 
-	$obj = new GeneralNotations();
+	$GN = new GeneralNotations();
+	
+	$filename = "cv.doc";
+
+    $content = $GN->getWordDocContent($filename);
+    if($content !== false) {
+
+        echo nl2br($content);   
+    }
+    else {
+        echo 'Couldn\'t find the file. Please check that file.';
+    }
+	
 ?>
